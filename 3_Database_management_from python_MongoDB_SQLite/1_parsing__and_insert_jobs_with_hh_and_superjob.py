@@ -30,9 +30,10 @@ class insert_to_mongodb():
 
     def search_vacancies_by_amount(self,amount):
         cursor = self.__connect()
-        result = cursor.find({'$or': [ { 'min_salary': { '$gte': 100000 } }, {'max_salary': { '$gte': amount } } ] },{'_id':0})
+        result = cursor.find({'$or': [ { 'min_salary': { '$gte': amount } }, {'max_salary': { '$gte': amount } } ] },{'_id':0})
         for i in result:
             pprint(i)
+
     def add_new(self,my_data):
         cursor = self.__connect()
         for i in my_data:
@@ -183,13 +184,13 @@ class sj():
         return salary
 
 if __name__=='__main__':
-    vac_hh = hh('Python')
-    vac_sj = sj('Python')
-    my_data=vac_hh.get_vacancies()+vac_sj.get_vacancies_from_with_salary()
+    # vac_hh = hh('Python')
+    # vac_sj = sj('Python')
+    # my_data=vac_hh.get_vacancies()+vac_sj.get_vacancies_from_with_salary()
     load  = insert_to_mongodb('my_db', 'test')
     # load.only_insert_all_data(my_data)
-    # load.search_vacancies_by_amount(100000)
-    load.add_new(my_data)
+    load.search_vacancies_by_amount(100000)
+    # load.add_new(my_data)
 
 
 
