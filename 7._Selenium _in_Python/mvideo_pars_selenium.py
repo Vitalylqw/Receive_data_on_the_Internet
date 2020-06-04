@@ -33,8 +33,8 @@ while True:
         break
 
 bloks= driver.find_elements_by_xpath("//div[@data-sel='new_cart-carousel-gallery_accessories']")
-goods=bloks[1].find_elements_by_xpath(".//li[@class='gallery-list-item height-ready']//a[@data-product-info]")
-
+# goods=bloks[1].find_elements_by_xpath(".//li[@class='gallery-list-item height-ready']//a[@data-product-info]")
+goods=bloks[1].find_elements_by_xpath(".//li[@class='gallery-list-item height-ready']//h4/a[@data-product-info]")
 
 client = MongoClient('localhost:27017')
 db = client.goods
