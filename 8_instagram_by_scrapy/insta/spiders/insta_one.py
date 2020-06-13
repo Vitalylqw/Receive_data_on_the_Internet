@@ -11,8 +11,7 @@ class InstaOneSpider(scrapy.Spider):
     allowed_domains = ['instagram.com']
     start_urls = ['http://instagram.com/']
     insta_login = 'ivanovsergei9696'
-    insta_pass = '#PWD_INSTAGRAM_BROWSER:10:1591549038:AZRQAB8Rak7Iu6YpSJEaDTp4aey2r589fKI5sTq8oeX5sdUZ7aqv0p+FkpJe03NdMsW89AeEuF5t0dI4CU6WZCh4O880rWQt4254WiPbHrtTFONScxZEyty1djea1hNF36pERBPY75CD93bB'
-    inst_login_link = 'https://instagram.com/accounts/login/ajax/'
+    insta_pass = '#PWD_INSTAGRAM_BROWSER:10:1591549038:'
     graphql_url = 'https://www.instagram.com/graphql/query/?'
     hash_subscribers = 'c76146de99bb02f6415203be841dd25a'
     hash_ssubscriptions= 'd04b0a864b4b54837c0d870b0e77e076'
